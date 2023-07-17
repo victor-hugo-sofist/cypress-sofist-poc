@@ -8,10 +8,10 @@ export class checkoutTwoPage{
 
     constructor(url:string | undefined){
         if (url == undefined) {
-            throw new Error("checkoutOnePage: A variável url não foi definida");
+            throw new Error("checkoutTwoPage: A variável url não foi definida");
         }
         if (url.length == 0) {
-            throw new Error("checkoutOnePage: A variável url está vazia");
+            throw new Error("checkoutTwoPage: A variável url está vazia");
         }
 
         this.baseURL = url
