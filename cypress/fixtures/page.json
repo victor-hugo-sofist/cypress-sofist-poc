@@ -1,0 +1,13 @@
+{
+  "title":{
+    "inventory":"Products",
+    "cart":"Your Cart",
+    "checkoutOne":"Checkout: Your Information",
+    "checkoutTwo":"Checkout: Overview",
+    "checkoutComplete":"Checkout: Complete!"
+  },
+  "message": {
+    "thanksForOrder": "Thank you for your order!",
+    "orderDispatched": "Your order has been dispatched, and will arrive just as fast as the pony can get there!"
+  }
+}
