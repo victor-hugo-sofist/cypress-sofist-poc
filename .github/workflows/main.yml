@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+      - name: Install NPM dependencies
+        uses: npm install
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
