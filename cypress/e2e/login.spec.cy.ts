@@ -9,6 +9,7 @@ describe("Module login:", () => {
   const inventory: inventoryPage = new inventoryPage(url);
 
   beforeEach(function () {
+    cy.clearAllCookies()
     login.access();
   });
 
@@ -21,12 +22,12 @@ describe("Module login:", () => {
     cy.url().should("be.equal", url + "inventory.html");
   });
 
-  // it("problem user should be login", () => {
-  //   login.withUser(
-  //     Cypress.env("username_problem_user"),
-  //     Cypress.env("password"),
-  //   );
-  //   inventory.isVisible();
-  //   cy.url().should("be.equal", url + "inventory.html");
-  // });
+  it("problem user should be login", () => {
+    login.withUser(
+      Cypress.env("username_problem_user"),
+      Cypress.env("password"),
+    );
+    inventory.isVisible();
+    cy.url().should("be.equal", url + "inventory.html");
+  });
 });
