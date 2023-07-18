@@ -7,7 +7,7 @@ export default defineConfig({
     },
     chromeWebSecurity:false,
     env: {
-      saucedemo_url: "https://www.saucedemo.com/",
+      saucedemo_url: "https://saucedemo.com/",
       username_standard_user: "standard_user",
       username_problem_user: "problem_user",
       password: "secret_sauce",
