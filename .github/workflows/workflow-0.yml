@@ -1,9 +1,0 @@
-name: End-to-end tests - Cypress - Electron
-on: push
-jobs:
-  chrome:
-    runs-on: ubuntu-22.04
-    name: E2E on Electron
-    steps:
-      - uses: actions/checkout@v3
-      - uses: cypress-io/github-action@v5

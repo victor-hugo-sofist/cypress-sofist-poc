@@ -1,0 +1,34 @@
+name: End-to-end tests - Cypress - Electron
+on: push
+jobs:
+  # electron:
+  #   runs-on: ubuntu-22.04
+  #   name: E2E on Electron
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: cypress-io/github-action@v5
+  edge:
+    runs-on: ubuntu-22.04
+    name: E2E on Edge
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cypress-io/github-action@v5
+        with:
+          browser: edge
+  chrome:
+    runs-on: ubuntu-22.04
+    name: E2E on Chrome
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+  firefox:
+    runs-on: ubuntu-22.04
+    name: E2E on Firefox
+    steps:
+      - uses: browser-actions/setup-firefox@v1
+      - uses: actions/checkout@v3
+      - uses: cypress-io/github-action@v5
+        with:
+          browser: firefox
