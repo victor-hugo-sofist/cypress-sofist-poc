@@ -7,7 +7,7 @@ describe("Module login:", () => {
   const login: loginPage = new loginPage(url);
   const inventory: inventoryPage = new inventoryPage(url);
 
-  before(function () {
+  beforeEach(function () {
     login.access();
   });
 
