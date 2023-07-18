@@ -12,7 +12,8 @@ import { message } from "../fixtures/page.json";
 
 import { randomZipCode } from "../support/utils/zip-code";
 
-const url: string = Cypress.env("saucedemo_url");
+// const url: string = Cypress.env("saucedemo_url");
+const url: string = 'https://www.saucedemo.com/';
 
 describe("Module buy:", () => {
   const login: loginPage = new loginPage(url);
