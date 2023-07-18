@@ -1,15 +1,13 @@
 import { loginPage } from "../support/page/login";
 import { inventoryPage } from "../support/page/inventory";
 
-// const url: string = Cypress.env("saucedemo_url");
-const url: string = 'https://www.saucedemo.com/';
+const url: string = Cypress.env("saucedemo_url");
 
 describe("Module login:", () => {
   const login: loginPage = new loginPage(url);
   const inventory: inventoryPage = new inventoryPage(url);
 
-  beforeEach(function () {
-    cy.wait(1000)
+  before(function () {
     login.access();
   });
 
@@ -23,7 +21,6 @@ describe("Module login:", () => {
   });
 
   it("problem user should be login", () => {
-    cy.debug()
     login.withUser(
       Cypress.env("username_problem_user"),
       Cypress.env("password"),

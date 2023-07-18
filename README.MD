@@ -7,6 +7,8 @@ npx eslint . --ext .ts --fix-type Array
 
 npm run cypress:open
 
+npx cypress run --browser=chrome --headless
+
 # PROJETO DE TESTES E2E - SOFIST - CYPRESS
 
 ## TECNOLOGIAS

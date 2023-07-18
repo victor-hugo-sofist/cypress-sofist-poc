@@ -21,7 +21,9 @@ export class inventoryPage {
   }
 
   selectARandomProduct(productIndex: number) {
-    cy.get(elements.productButton.replace("%s", productTestID[productIndex])).click();
+    cy.get(
+      elements.productButton.replace("%s", productTestID[productIndex]),
+    ).click();
   }
 
   clickInCart() {
