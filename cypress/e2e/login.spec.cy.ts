@@ -9,7 +9,7 @@ describe("Module login:", () => {
   const inventory: inventoryPage = new inventoryPage(url);
 
   beforeEach(function () {
-    cy.clearAllCookies()
+    cy.clearAllLocalStorage()
     login.access();
   });
 
