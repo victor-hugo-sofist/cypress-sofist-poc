@@ -1,4 +1,4 @@
-name: End-to-end tests - Cypress - Electron
+name: End-to-end tests - Cypress
 on: push
 jobs:
   # electron:
