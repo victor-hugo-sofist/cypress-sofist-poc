@@ -1,12 +1,12 @@
 name: End-to-end tests - Cypress
 on: push
 jobs:
-  # electron:
-  #   runs-on: ubuntu-22.04
-  #   name: E2E on Electron
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: cypress-io/github-action@v5
+  electron:
+    runs-on: ubuntu-22.04
+    name: E2E on Electron
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cypress-io/github-action@v5
   edge:
     runs-on: ubuntu-22.04
     name: E2E on Edge
