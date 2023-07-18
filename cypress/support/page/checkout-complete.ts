@@ -1,6 +1,4 @@
-import { ELEMENTS } from "../element/checkout-complete";
-
-const elem = ELEMENTS;
+import { elements } from "../element/checkout-complete";
 
 export class checkoutCompletePage {
   readonly baseURL: string;
@@ -16,12 +14,12 @@ export class checkoutCompletePage {
     this.baseURL = url;
   }
 
-  checkoutCompleteVisible() {
-    cy.get(elem.title).should("be.visible");
-    cy.get(elem.backToProducts).should("be.visible");
+  isVisible() {
+    cy.get(elements.title).should("be.visible");
+    cy.get(elements.backToProducts).should("be.visible");
   }
 
   clickInBackHome() {
-    cy.get(elem.backToProducts).click();
+    cy.get(elements.backToProducts).click();
   }
 }

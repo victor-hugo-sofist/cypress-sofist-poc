@@ -16,7 +16,7 @@ describe("Module login:", () => {
       Cypress.env("username_standard_user"),
       Cypress.env("password"),
     );
-    inventory.inventoryPageIsVisible();
+    inventory.isVisible();
     cy.url().should("be.equal", url + "inventory.html");
   });
 
@@ -25,7 +25,7 @@ describe("Module login:", () => {
       Cypress.env("username_problem_user"),
       Cypress.env("password"),
     );
-    inventory.inventoryPageIsVisible();
+    inventory.isVisible();
     cy.url().should("be.equal", url + "inventory.html");
   });
 });

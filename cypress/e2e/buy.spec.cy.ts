@@ -1,8 +1,8 @@
 import { loginPage } from "../support/page/login";
 import { inventoryPage } from "../support/page/inventory";
 import { cartPage } from "../support/page/cart";
-import { checkoutOnePage } from "../support/page/checkout-one";
-import { checkoutTwoPage } from "../support/page/checkout-two";
+import { checkoutStepOnePage } from "../support/page/checkout-step-one";
+import { checkoutStepTwoPage } from "../support/page/checkout-step-two";
 import { checkoutCompletePage } from "../support/page/checkout-complete";
 
 import { productName } from "../fixtures/products.json";
@@ -23,8 +23,8 @@ describe("Module buy:", () => {
   const login: loginPage = new loginPage(url);
   const inventory: inventoryPage = new inventoryPage(url);
   const cart: cartPage = new cartPage(url);
-  const checkoutOne: checkoutOnePage = new checkoutOnePage(url);
-  const checkoutTwo: checkoutTwoPage = new checkoutTwoPage(url);
+  const checkoutOne: checkoutStepOnePage = new checkoutStepOnePage(url);
+  const checkoutTwo: checkoutStepTwoPage = new checkoutStepTwoPage(url);
   const checkoutComplete: checkoutCompletePage = new checkoutCompletePage(url);
 
   beforeEach(function () {
@@ -40,19 +40,19 @@ describe("Module buy:", () => {
     );
 
     cy.url().should("be.equal", url + "inventory.html");
-    inventory.inventoryPageIsVisible();
+    inventory.isVisible();
     cy.contains(pageTitle.inventory).should("be.visible");
     inventory.selectARandomProduct(productIndex);
     inventory.clickInCart();
 
     cy.url().should("be.equal", url + "cart.html");
-    cart.cartPageIsVisible();
+    cart.isVisible();
     cy.contains(pageTitle.cart).should("be.visible");
     cy.contains(products[productIndex]).should("be.visible");
     cart.clickInCheckout();
 
     cy.url().should("be.equal", url + "checkout-step-one.html");
-    checkoutOne.checkoutOneVisible();
+    checkoutOne.isVisible();
     cy.contains(pageTitle.checkoutOne).should("be.visible");
     checkoutOne.fillFirstName(cust.firstName);
     checkoutOne.fillLastName(cust.lastName);
@@ -60,18 +60,16 @@ describe("Module buy:", () => {
     checkoutOne.clickInContinue();
 
     cy.url().should("be.equal", url + "checkout-step-two.html");
-    checkoutTwo.checkoutTwoVisible();
+    checkoutTwo.isVisible();
     cy.contains(pageTitle.checkoutTwo).should("be.visible");
     cy.contains(products[productIndex]).should("be.visible");
     checkoutTwo.clickInFinish();
 
     cy.url().should("be.equal", url + "checkout-complete.html");
-    checkoutComplete.checkoutCompleteVisible();
+    checkoutComplete.isVisible();
     cy.contains(pageTitle.checkoutComplete).should("be.visible");
-
     cy.contains(pageMessage.thanksForOrder).should("be.visible");
     cy.contains(pageMessage.orderDispatched).should("be.visible");
-
     checkoutComplete.clickInBackHome();
     cy.url().should("be.equal", url + "inventory.html");
   });

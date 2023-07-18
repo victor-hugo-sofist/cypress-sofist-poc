@@ -1,6 +1,4 @@
-import { ELEMENTS } from "../element/login";
-
-const elem = ELEMENTS;
+import { elements } from "../element/login";
 
 export class loginPage {
   readonly baseURL: string;
@@ -18,14 +16,14 @@ export class loginPage {
 
   access() {
     cy.visit(this.baseURL);
-    cy.get(elem.username).should("be.visible");
-    cy.get(elem.password).should("be.visible");
-    cy.get(elem.loginButton).should("be.visible");
+    cy.get(elements.username).should("be.visible");
+    cy.get(elements.password).should("be.visible");
+    cy.get(elements.loginButton).should("be.visible");
   }
 
   withUser(username: string, password: string) {
-    cy.get(elem.username).type(username);
-    cy.get(elem.password).type(password);
-    cy.get(elem.loginButton).click();
+    cy.get(elements.username).type(username);
+    cy.get(elements.password).type(password);
+    cy.get(elements.loginButton).click();
   }
 }

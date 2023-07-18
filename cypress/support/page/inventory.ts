@@ -1,8 +1,5 @@
-import { ELEMENTS } from "../element/inventory";
+import { elements } from "../element/inventory";
 import { productTestID } from "../../fixtures/products.json";
-
-const elem = ELEMENTS;
-const prodTestID = productTestID;
 
 export class inventoryPage {
   readonly baseURL: string;
@@ -18,16 +15,16 @@ export class inventoryPage {
     this.baseURL = url;
   }
 
-  inventoryPageIsVisible() {
-    cy.get(elem.title).should("be.visible");
-    cy.get(elem.cart).should("be.visible");
+  isVisible() {
+    cy.get(elements.title).should("be.visible");
+    cy.get(elements.cart).should("be.visible");
   }
 
   selectARandomProduct(productIndex: number) {
-    cy.get(elem.productButton.replace("%s", prodTestID[productIndex])).click();
+    cy.get(elements.productButton.replace("%s", productTestID[productIndex])).click();
   }
 
   clickInCart() {
-    cy.get(elem.cart).click();
+    cy.get(elements.cart).click();
   }
 }

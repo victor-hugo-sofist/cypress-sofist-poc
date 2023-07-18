@@ -1,8 +1,6 @@
-import { ELEMENTS } from "../element/checkout-two";
+import { elements } from "../element/checkout-step-two";
 
-const elem = ELEMENTS;
-
-export class checkoutTwoPage {
+export class checkoutStepTwoPage {
   readonly baseURL: string;
 
   constructor(url: string | undefined) {
@@ -16,17 +14,17 @@ export class checkoutTwoPage {
     this.baseURL = url;
   }
 
-  checkoutTwoVisible() {
-    cy.get(elem.title).should("be.visible");
-    cy.get(elem.finish).should("be.visible");
-    cy.get(elem.cancel).should("be.visible");
+  isVisible() {
+    cy.get(elements.title).should("be.visible");
+    cy.get(elements.finish).should("be.visible");
+    cy.get(elements.cancel).should("be.visible");
   }
 
   clickInFinish() {
-    cy.get(elem.finish).click();
+    cy.get(elements.finish).click();
   }
 
   clickInCancel() {
-    cy.get(elem.cancel).click();
+    cy.get(elements.cancel).click();
   }
 }

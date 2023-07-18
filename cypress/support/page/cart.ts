@@ -1,6 +1,4 @@
-import { ELEMENTS } from "../element/cart";
-
-const elem = ELEMENTS;
+import { elements } from "../element/cart";
 
 export class cartPage {
   readonly baseURL: string;
@@ -16,12 +14,12 @@ export class cartPage {
     this.baseURL = url;
   }
 
-  cartPageIsVisible() {
-    cy.get(elem.yourCart).should("be.visible");
-    cy.get(elem.checkout).should("be.visible");
+  isVisible() {
+    cy.get(elements.yourCart).should("be.visible");
+    cy.get(elements.checkout).should("be.visible");
   }
 
   clickInCheckout() {
-    cy.get(elem.checkout).click();
+    cy.get(elements.checkout).click();
   }
 }

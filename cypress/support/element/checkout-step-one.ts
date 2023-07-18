@@ -1,4 +1,4 @@
-export const ELEMENTS = {
+export const elements = {
   title: "[class=title]",
   firstName: "[data-test=firstName]",
   lastName: "[data-test=lastName]",
