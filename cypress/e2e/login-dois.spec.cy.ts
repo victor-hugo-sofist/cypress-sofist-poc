@@ -12,21 +12,12 @@ describe("Module login:", () => {
     login.access();
   });
 
-  it("standard user should be login", () => {
+  it("problem user should be login", () => {
     login.withUser(
-      Cypress.env("username_standard_user"),
+      Cypress.env("username_problem_user"),
       Cypress.env("password"),
     );
     inventory.isVisible();
     cy.url().should("be.equal", url + "inventory.html");
   });
-
-  // it("problem user should be login", () => {
-  //   login.withUser(
-  //     Cypress.env("username_problem_user"),
-  //     Cypress.env("password"),
-  //   );
-  //   inventory.isVisible();
-  //   cy.url().should("be.equal", url + "inventory.html");
-  // });
 });
