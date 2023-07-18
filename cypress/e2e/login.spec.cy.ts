@@ -9,7 +9,7 @@ describe("Module login:", () => {
   const inventory: inventoryPage = new inventoryPage(url);
 
   beforeEach(function () {
-    cy.clearAllLocalStorage()
+    cy.wait(1000)
     login.access();
   });
 
@@ -23,6 +23,7 @@ describe("Module login:", () => {
   });
 
   it("problem user should be login", () => {
+    cy.debug()
     login.withUser(
       Cypress.env("username_problem_user"),
       Cypress.env("password"),
