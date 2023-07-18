@@ -1,10 +1,10 @@
 {
-  "title":{
-    "inventory":"Products",
-    "cart":"Your Cart",
-    "checkoutOne":"Checkout: Your Information",
-    "checkoutTwo":"Checkout: Overview",
-    "checkoutComplete":"Checkout: Complete!"
+  "title": {
+    "inventory": "Products",
+    "cart": "Your Cart",
+    "checkoutOne": "Checkout: Your Information",
+    "checkoutTwo": "Checkout: Overview",
+    "checkoutComplete": "Checkout: Complete!"
   },
   "message": {
     "thanksForOrder": "Thank you for your order!",

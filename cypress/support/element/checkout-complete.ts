@@ -1,4 +1,4 @@
 export const ELEMENTS = {
-    title:'[class=title]',
-    backToProducts: '[data-test=back-to-products]'
-}
+  title: "[class=title]",
+  backToProducts: "[data-test=back-to-products]",
+};

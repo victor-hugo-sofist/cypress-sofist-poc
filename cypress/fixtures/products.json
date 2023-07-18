@@ -1,12 +1,12 @@
 {
-  "productTestID":[
+  "productTestID": [
     "sauce-labs-backpack",
     "sauce-labs-bike-light",
     "sauce-labs-bolt-t-shirt",
     "sauce-labs-fleece-jacket",
     "sauce-labs-onesie"
   ],
-  "productName":[
+  "productName": [
     "Sauce Labs Backpack",
     "Sauce Labs Bike Light",
     "Sauce Labs Bolt T-Shirt",
@@ -14,5 +14,3 @@
     "Sauce Labs Onesie"
   ]
 }
-  
-  

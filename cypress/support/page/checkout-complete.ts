@@ -1,28 +1,27 @@
-import { ELEMENTS } from "../element/checkout-complete"
+import { ELEMENTS } from "../element/checkout-complete";
 
 const elem = ELEMENTS;
 
-export class checkoutCompletePage{
+export class checkoutCompletePage {
+  readonly baseURL: string;
 
-    readonly baseURL:string
-
-    constructor(url:string | undefined){
-        if (url == undefined) {
-            throw new Error("checkoutCompletePage: A variável url não foi definida");
-        }
-        if (url.length == 0) {
-            throw new Error("checkoutCompletePage: A variável url está vazia");
-        }
-
-        this.baseURL = url
+  constructor(url: string | undefined) {
+    if (url == undefined) {
+      throw new Error("checkoutCompletePage: A variável url não foi definida");
+    }
+    if (url.length == 0) {
+      throw new Error("checkoutCompletePage: A variável url está vazia");
     }
 
-    checkoutCompleteVisible(){
-        cy.get(elem.title).should('be.visible')
-        cy.get(elem.backToProducts).should('be.visible')
-    }
+    this.baseURL = url;
+  }
 
-    clickInBackHome(){
-        cy.get(elem.backToProducts).click()
-    }
+  checkoutCompleteVisible() {
+    cy.get(elem.title).should("be.visible");
+    cy.get(elem.backToProducts).should("be.visible");
+  }
+
+  clickInBackHome() {
+    cy.get(elem.backToProducts).click();
+  }
 }

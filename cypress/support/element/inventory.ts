@@ -1,5 +1,5 @@
 export const ELEMENTS = {
-    title:'[class=title]',
-    cart:'[id=shopping_cart_container]',
-    productButton: '[id=add-to-cart-%s]'
-}
+  title: "[class=title]",
+  cart: "[id=shopping_cart_container]",
+  productButton: "[id=add-to-cart-%s]",
+};
