@@ -41,11 +41,13 @@ Para executar testes em modo debug é preciso abrir o **CYPRESS** e incluir no c
 
 ## Executando testes gerando um relatório Allure
 
->`npx CYPRESS test --reporter=line,allure-CYPRESS`
+OBS: O relatório Allure não funciona adequadamente a partir da versão 12.15.0 do CYPRESS. Até que este bug seja resolvido nas versões mais recentes, foi utilizada nesta branch a versão 12.14.0 do CYPRESS.
 
->`allure generate ./allure-results --clean`
+>`npx cypress run --env allure=true`
 
->`allure open ./allure-report`
+>`npx allure generate ./allure-results --clean`
+
+>`npx allure open ./allure-report`
 
 ## Executando o ESLint
 Lembre-se: Instale a extensão **ESLINT** no VS-Code.

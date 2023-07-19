@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.17.1",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "allure-commandline": "^2.23.0",
+    "cypress": "12.14.0",
     "eslint-plugin-cypress": "^2.13.3",
     "prettier": "3.0.0",
     "typescript": "^5.1.6"
