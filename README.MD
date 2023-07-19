@@ -14,13 +14,6 @@
 Execute:
 >`npm install`
 
-### Dependências Java - Allure Report
-Instale o JDK-Java 8 ou superior. [Link para download.](https://www.oracle.com/java/technologies/downloads/#jdk20-windows)
-
-Crie a variável de ambiente `JAVA_HOME` e insira o diretório do local onde foi instalado o JDK.
-
-Exemplo: `C:\Program Files\Java\jdk-20`
-
 ## Abrindo o CYPRESS
 >`npm run cypress:open`
 
