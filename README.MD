@@ -39,14 +39,6 @@ Para executar testes em modo debug é preciso abrir o **CYPRESS** e incluir no c
 
 **OBS:** Se nenhum browser é informado, o padrão é executar utilizando o Electron. Os testes são executados em headless, mas é possível também usar a flag `--headless`
 
-## Executando testes gerando um relatório Allure
-
->`npx CYPRESS test --reporter=line,allure-CYPRESS`
-
->`allure generate ./allure-results --clean`
-
->`allure open ./allure-report`
-
 ## Executando o ESLint
 Lembre-se: Instale a extensão **ESLINT** no VS-Code.
 >`npx eslint . --ext .ts`
