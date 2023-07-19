@@ -6,7 +6,6 @@
 - **CYPRESS** - Framework de testes Web e API
 - **ESLINT** - Ferramenta de lint
 - **PRETTIER** - Padronizador estilístico
-- **ALLURE REPORT** - Relatório de execução de testes personalizado
 
 ## INSTALANDO AS DEPENDÊNCIAS
 
